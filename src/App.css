@@ -2,7 +2,9 @@
   box-sizing: border-box;
 }
 
-html, body, #root {
+html,
+body,
+#root {
   height: 100%;
 }
 
@@ -44,7 +46,7 @@ html, body, #root {
   display: flex;
   justify-content: center;
   align-items: center;
-} 
+}
 
 .navigation {
   display: none;
@@ -69,7 +71,7 @@ html, body, #root {
 }
 
 .vehicle-infobox div {
-  white-space: nowrap
+  white-space: nowrap;
 }
 
 .vehicle-infobox {
@@ -91,6 +93,12 @@ html, body, #root {
 .stats {
   display: flex;
   align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 15%;
+  background-color: #fff;
 }
 
 .stats > div {
@@ -108,6 +116,11 @@ html, body, #root {
 .info-box {
   display: flex;
   align-items: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background-color: #fff;
+  z-index: 2;
 }
 
 .info-box > div {
@@ -122,45 +135,6 @@ html, body, #root {
   transition: 2s ease-in-out;
 }
 
-
-@keyframes blink {
-  0% {
-    opacity: .2;
-  }
-  20% {
-    opacity: 1;
-  }
-  100% {
-    opacity: .2;
-  }
-}
-
-.loading {
-  font-weight: bold;
-  font-size: 5rem;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.loading span {
-  animation-name: blink;
-  animation-duration: 1.4s;
-  animation-iteration-count: infinite;
-  animation-fill-mode: both;
-}
-
-.loading span:nth-child(2) {
-  animation-delay: .2s;
-}
-
-.loading span:nth-child(3) {
-  animation-delay: .4s;
-}
-
-
-
-
 .marker2 {
   position: absolute;
   top: 50%;
@@ -174,12 +148,12 @@ html, body, #root {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  transition: .25s ease-out;
+  transition: 0.25s ease-out;
 }
 
 .marker2:hover {
-    z-index: 1;
-    cursor: pointer;
+  z-index: 1;
+  cursor: pointer;
 }
 
 .info-box-container {
@@ -196,11 +170,24 @@ html, body, #root {
   margin-bottom: 10px;
 }
 
-
 .vehicle-type-image img {
   max-width: 150px;
 }
 
 .congestion-true {
   color: red;
+}
+
+.map-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.stats-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 15%;
+  background-color: #fff;
 }
